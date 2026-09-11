@@ -2,6 +2,7 @@ name: academy-monorepo
 
 services:
   web:
+    container_name: academy-monorepo-web
     build:
       context: .
       dockerfile: apps/web/Dockerfile
@@ -32,6 +33,7 @@ services:
     restart: unless-stopped
 
   api-gateway:
+    container_name: academy-monorepo-api-gateway
     build:
       context: .
       dockerfile: apps/api-gateway/Dockerfile
@@ -73,6 +75,7 @@ services:
     restart: unless-stopped
 
   students-service:
+    container_name: academy-monorepo-students-service
     build:
       context: .
       dockerfile: apps/students-service/Dockerfile
@@ -103,6 +106,7 @@ services:
     restart: unless-stopped
 
   teachers-service:
+    container_name: academy-monorepo-teachers-service
     build:
       context: .
       dockerfile: apps/teachers-service/Dockerfile
@@ -133,6 +137,7 @@ services:
     restart: unless-stopped
 
   courses-service:
+    container_name: academy-monorepo-courses-service
     build:
       context: .
       dockerfile: apps/courses-service/Dockerfile
@@ -163,6 +168,7 @@ services:
     restart: unless-stopped
 
   enrollments-service:
+    container_name: academy-monorepo-enrollments-service
     build:
       context: .
       dockerfile: apps/enrollments-service/Dockerfile
@@ -193,6 +199,7 @@ services:
     restart: unless-stopped
 
   notifications-service:
+    container_name: academy-monorepo-notifications-service
     build:
       context: .
       dockerfile: apps/notifications-service/Dockerfile
