@@ -1,0 +1,4 @@
+
+> @repo/notifications-service@1.0.0 lint D:\Learning_Projects\MonorepoExample\apps\notifications-service
+> eslint src --max-warnings=0
+

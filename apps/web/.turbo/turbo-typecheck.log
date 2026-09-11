@@ -1,0 +1,14 @@
+
+> @repo/web@1.0.0 typecheck D:\Learning_Projects\MonorepoExample\apps\web
+> tsc --noEmit
+
+src/app/courses/page.tsx(34,24): error TS2345: Argument of type '(course: Course) => JSX.Element' is not assignable to parameter of type '(value: Course, index: number, array: Course[]) => Element'.
+  Types of parameters 'course' and 'value' are incompatible.
+    Property 'department' is missing in type 'import("D:/Learning_Projects/MonorepoExample/packages/interfaces/src/course").Course' but required in type 'Course'.
+src/app/enrollments/page.tsx(34,28): error TS2345: Argument of type '(enrollment: Enrollment) => JSX.Element' is not assignable to parameter of type '(value: Enrollment, index: number, array: Enrollment[]) => Element'.
+  Types of parameters 'enrollment' and 'value' are incompatible.
+    Property 'enrollmentDate' is missing in type 'import("D:/Learning_Projects/MonorepoExample/packages/interfaces/src/enrollment").Enrollment' but required in type 'Enrollment'.
+src/app/teachers/page.tsx(36,25): error TS2345: Argument of type '(teacher: Teacher) => JSX.Element' is not assignable to parameter of type '(value: Teacher, index: number, array: Teacher[]) => Element'.
+  Types of parameters 'teacher' and 'value' are incompatible.
+    Property 'hireDate' is missing in type 'import("D:/Learning_Projects/MonorepoExample/packages/interfaces/src/teacher").Teacher' but required in type 'Teacher'.
+ ELIFECYCLE  Command failed with exit code 2.

@@ -1,0 +1,4 @@
+
+> @repo/courses-service@1.0.0 lint D:\Learning_Projects\MonorepoExample\apps\courses-service
+> eslint src --max-warnings=0
+

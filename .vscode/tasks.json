@@ -1,0 +1,43 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Docker: Start Academy Stack",
+			"type": "shell",
+			"command": "pnpm docker:up",
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Docker: Stop Academy Stack",
+			"type": "shell",
+			"command": "pnpm docker:down",
+			"problemMatcher": []
+		},
+		{
+			"label": "Build Workspace",
+			"type": "shell",
+			"command": "pnpm build",
+			"problemMatcher": []
+		},
+		{
+			"label": "Typecheck Workspace",
+			"type": "shell",
+			"command": "pnpm typecheck",
+			"problemMatcher": []
+		},
+		{
+			"label": "Lint Workspace",
+			"type": "shell",
+			"command": "pnpm lint",
+			"problemMatcher": []
+		},
+		{
+			"label": "Test Workspace",
+			"type": "shell",
+			"command": "pnpm test",
+			"problemMatcher": []
+		}
+	]
+}

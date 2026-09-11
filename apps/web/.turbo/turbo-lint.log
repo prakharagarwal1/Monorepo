@@ -1,0 +1,4 @@
+
+> @repo/web@1.0.0 lint D:\Learning_Projects\MonorepoExample\apps\web
+> eslint . --max-warnings=0
+

@@ -1,0 +1,62 @@
+
+> @repo/enrollments-service@1.0.0 build D:\Learning_Projects\MonorepoExample\apps\enrollments-service
+> nest build
+
+[96msrc/data.ts[0m:[93m8[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType '"active"' is not assignable to type '"pending" | "confirmed" | "completed" | "dropped"'.
+
+[7m8[0m     status: 'active',
+Found 6 error(s).
+[7m [0m [91m    ~~~~~~[0m
+
+
+  [96m../../packages/interfaces/src/enrollment.ts[0m:[93m6[0m:[93m3[0m
+    [7m6[0m   status: 'pending' | 'confirmed' | 'completed' | 'dropped';
+    [7m [0m [96m  ~~~~~~[0m
+    The expected type comes from property 'status' which is declared here on type 'Enrollment'
+[96msrc/data.ts[0m:[93m22[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType '"active"' is not assignable to type '"pending" | "confirmed" | "completed" | "dropped"'.
+
+[7m22[0m     status: 'active',
+[7m  [0m [91m    ~~~~~~[0m
+
+  [96m../../packages/interfaces/src/enrollment.ts[0m:[93m6[0m:[93m3[0m
+    [7m6[0m   status: 'pending' | 'confirmed' | 'completed' | 'dropped';
+    [7m [0m [96m  ~~~~~~[0m
+    The expected type comes from property 'status' which is declared here on type 'Enrollment'
+[96msrc/data.ts[0m:[93m36[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType '"active"' is not assignable to type '"pending" | "confirmed" | "completed" | "dropped"'.
+
+[7m36[0m     status: 'active',
+[7m  [0m [91m    ~~~~~~[0m
+
+  [96m../../packages/interfaces/src/enrollment.ts[0m:[93m6[0m:[93m3[0m
+    [7m6[0m   status: 'pending' | 'confirmed' | 'completed' | 'dropped';
+    [7m [0m [96m  ~~~~~~[0m
+    The expected type comes from property 'status' which is declared here on type 'Enrollment'
+[96msrc/data.ts[0m:[93m50[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType '"active"' is not assignable to type '"pending" | "confirmed" | "completed" | "dropped"'.
+
+[7m50[0m     status: 'active',
+[7m  [0m [91m    ~~~~~~[0m
+
+  [96m../../packages/interfaces/src/enrollment.ts[0m:[93m6[0m:[93m3[0m
+    [7m6[0m   status: 'pending' | 'confirmed' | 'completed' | 'dropped';
+    [7m [0m [96m  ~~~~~~[0m
+    The expected type comes from property 'status' which is declared here on type 'Enrollment'
+[96msrc/data.ts[0m:[93m57[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType '"cancelled"' is not assignable to type '"pending" | "confirmed" | "completed" | "dropped"'.
+
+[7m57[0m     status: 'cancelled',
+[7m  [0m [91m    ~~~~~~[0m
+
+  [96m../../packages/interfaces/src/enrollment.ts[0m:[93m6[0m:[93m3[0m
+    [7m6[0m   status: 'pending' | 'confirmed' | 'completed' | 'dropped';
+    [7m [0m [96m  ~~~~~~[0m
+    The expected type comes from property 'status' which is declared here on type 'Enrollment'
+[96msrc/data.ts[0m:[93m64[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType '"active"' is not assignable to type '"pending" | "confirmed" | "completed" | "dropped"'.
+
+[7m64[0m     status: 'active',
+[7m  [0m [91m    ~~~~~~[0m
+
+  [96m../../packages/interfaces/src/enrollment.ts[0m:[93m6[0m:[93m3[0m
+    [7m6[0m   status: 'pending' | 'confirmed' | 'completed' | 'dropped';
+    [7m [0m [96m  ~~~~~~[0m
+    The expected type comes from property 'status' which is declared here on type 'Enrollment'
+
+ ELIFECYCLE  Command failed with exit code 1.

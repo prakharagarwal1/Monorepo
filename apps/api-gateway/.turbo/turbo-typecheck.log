@@ -1,0 +1,4 @@
+
+> @repo/api-gateway@1.0.0 typecheck D:\Learning_Projects\MonorepoExample\apps\api-gateway
+> tsc --noEmit
+
