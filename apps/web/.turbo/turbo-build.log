@@ -1,0 +1,8 @@
+
+> @repo/web@1.0.0 build D:\Learning_Projects\MonorepoExample\apps\web
+> next build
+
+   ▲ Next.js 15.4.6
+   - Environments: .env
+
+   Creating an optimized production build ...

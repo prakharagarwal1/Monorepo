@@ -1,0 +1,36 @@
+{
+  "name": "monorepo-example",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "dev:web": "pnpm --filter @repo/web dev",
+    "dev:api": "pnpm --filter @repo/api-gateway dev",
+    "dev:students": "pnpm --filter @repo/students-service dev",
+    "dev:teachers": "pnpm --filter @repo/teachers-service dev",
+    "dev:courses": "pnpm --filter @repo/courses-service dev",
+    "dev:enrollments": "pnpm --filter @repo/enrollments-service dev",
+    "dev:notifications": "pnpm --filter @repo/notifications-service dev",
+    "docker:up": "docker compose up --build --detach",
+    "docker:watch": "docker compose up --build --watch",
+    "docker:down": "docker compose down"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@next/eslint-plugin-next": "15.4.6",
+    "@types/node": "^22.15.0",
+    "eslint": "^9.22.0",
+    "turbo": "2.5.8",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.26.0"
+  }
+}

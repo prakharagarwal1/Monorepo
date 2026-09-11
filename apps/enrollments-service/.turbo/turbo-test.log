@@ -1,0 +1,5 @@
+
+> @repo/enrollments-service@1.0.0 test D:\Learning_Projects\MonorepoExample\apps\enrollments-service
+> jest --runInBand --passWithNoTests
+
+No tests found, exiting with code 0

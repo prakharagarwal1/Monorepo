@@ -1,0 +1,123 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(13, 25, 45, 0.92);
+  backdrop-filter: blur(12px);
+  padding: 24px 16px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navList li {
+  margin-bottom: 6px;
+}
+
+.homeLink {
+  display: block;
+  text-decoration: none;
+  color: #f4f7fb;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.homeLink:hover {
+  background: rgba(109, 141, 255, 0.16);
+}
+
+.navItem {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  text-decoration: none;
+  color: #e8edf8;
+  font-weight: 600;
+  padding: 12px 14px;
+  transition: background 160ms ease;
+}
+
+.navLink:hover {
+  background: rgba(109, 141, 255, 0.18);
+}
+
+.navLabel {
+  display: block;
+}
+
+.navCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  height: 26px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: rgba(109, 141, 255, 0.22);
+  color: #cfe0ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.preview {
+  padding: 10px 14px 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.previewList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+}
+
+.previewItem {
+  color: #aebbd0;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  padding: 4px 0;
+}
+
+.previewEmpty {
+  color: #6b7a95;
+  font-size: 0.82rem;
+  margin: 0 0 12px;
+}
+
+.viewAll {
+  display: inline-block;
+  text-decoration: none;
+  color: #8fb0ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.viewAll:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  box-sizing: border-box;
+}

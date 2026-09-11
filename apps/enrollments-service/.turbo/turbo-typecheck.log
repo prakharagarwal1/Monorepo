@@ -1,0 +1,4 @@
+
+> @repo/enrollments-service@1.0.0 typecheck D:\Learning_Projects\MonorepoExample\apps\enrollments-service
+> tsc --noEmit
+

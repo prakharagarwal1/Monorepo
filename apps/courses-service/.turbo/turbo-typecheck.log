@@ -1,0 +1,4 @@
+
+> @repo/courses-service@1.0.0 typecheck D:\Learning_Projects\MonorepoExample\apps\courses-service
+> tsc --noEmit
+

@@ -1,0 +1,17 @@
+{
+  "name": "@academy/utils",
+  "version": "0.1.0",
+  "description": "Shared utility functions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

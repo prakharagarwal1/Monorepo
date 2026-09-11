@@ -1,0 +1,223 @@
+name: academy-monorepo
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    env_file:
+      - apps/web/.env
+    ports:
+      - "3000:3000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    develop:
+      watch:
+        - action: rebuild
+          path: apps/web
+        - action: rebuild
+          path: packages
+        - action: rebuild
+          path: package.json
+        - action: rebuild
+          path: pnpm-lock.yaml
+        - action: rebuild
+          path: pnpm-workspace.yaml
+        - action: restart
+          path: apps/web/.env
+    restart: unless-stopped
+
+  api-gateway:
+    build:
+      context: .
+      dockerfile: apps/api-gateway/Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "3001:3001"
+    depends_on:
+      students-service:
+        condition: service_healthy
+      teachers-service:
+        condition: service_healthy
+      courses-service:
+        condition: service_healthy
+      enrollments-service:
+        condition: service_healthy
+      notifications-service:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3001/api/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    develop:
+      watch:
+        - action: rebuild
+          path: apps/api-gateway
+        - action: rebuild
+          path: packages
+        - action: rebuild
+          path: package.json
+        - action: rebuild
+          path: pnpm-lock.yaml
+        - action: rebuild
+          path: pnpm-workspace.yaml
+        - action: restart
+          path: .env
+    restart: unless-stopped
+
+  students-service:
+    build:
+      context: .
+      dockerfile: apps/students-service/Dockerfile
+    env_file:
+      - apps/students-service/.env
+    ports:
+      - "3002:3002"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3002/api/students/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    develop:
+      watch:
+        - action: rebuild
+          path: apps/students-service
+        - action: rebuild
+          path: packages
+        - action: rebuild
+          path: package.json
+        - action: rebuild
+          path: pnpm-lock.yaml
+        - action: rebuild
+          path: pnpm-workspace.yaml
+        - action: restart
+          path: apps/students-service/.env
+    restart: unless-stopped
+
+  teachers-service:
+    build:
+      context: .
+      dockerfile: apps/teachers-service/Dockerfile
+    env_file:
+      - apps/teachers-service/.env
+    ports:
+      - "3003:3003"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3003/api/teachers/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    develop:
+      watch:
+        - action: rebuild
+          path: apps/teachers-service
+        - action: rebuild
+          path: packages
+        - action: rebuild
+          path: package.json
+        - action: rebuild
+          path: pnpm-lock.yaml
+        - action: rebuild
+          path: pnpm-workspace.yaml
+        - action: restart
+          path: apps/teachers-service/.env
+    restart: unless-stopped
+
+  courses-service:
+    build:
+      context: .
+      dockerfile: apps/courses-service/Dockerfile
+    env_file:
+      - apps/courses-service/.env
+    ports:
+      - "3004:3004"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3004/api/courses/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    develop:
+      watch:
+        - action: rebuild
+          path: apps/courses-service
+        - action: rebuild
+          path: packages
+        - action: rebuild
+          path: package.json
+        - action: rebuild
+          path: pnpm-lock.yaml
+        - action: rebuild
+          path: pnpm-workspace.yaml
+        - action: restart
+          path: apps/courses-service/.env
+    restart: unless-stopped
+
+  enrollments-service:
+    build:
+      context: .
+      dockerfile: apps/enrollments-service/Dockerfile
+    env_file:
+      - apps/enrollments-service/.env
+    ports:
+      - "3005:3005"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3005/api/enrollments/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    develop:
+      watch:
+        - action: rebuild
+          path: apps/enrollments-service
+        - action: rebuild
+          path: packages
+        - action: rebuild
+          path: package.json
+        - action: rebuild
+          path: pnpm-lock.yaml
+        - action: rebuild
+          path: pnpm-workspace.yaml
+        - action: restart
+          path: apps/enrollments-service/.env
+    restart: unless-stopped
+
+  notifications-service:
+    build:
+      context: .
+      dockerfile: apps/notifications-service/Dockerfile
+    env_file:
+      - apps/notifications-service/.env
+    ports:
+      - "3006:3006"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3006/api/notifications/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    develop:
+      watch:
+        - action: rebuild
+          path: apps/notifications-service
+        - action: rebuild
+          path: packages
+        - action: rebuild
+          path: package.json
+        - action: rebuild
+          path: pnpm-lock.yaml
+        - action: rebuild
+          path: pnpm-workspace.yaml
+        - action: restart
+          path: apps/notifications-service/.env
+    restart: unless-stopped
